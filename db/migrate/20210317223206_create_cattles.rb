@@ -3,7 +3,7 @@ class CreateCattles < ActiveRecord::Migration[6.0]
     create_table :cattles do |t|
       t.string :cattle_name
       t.string :politician
-      t.string :type
+      t.string :cattle_type
 
       t.timestamps
     end

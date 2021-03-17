@@ -1,0 +1,2 @@
+class Cattle < ApplicationRecord
+end

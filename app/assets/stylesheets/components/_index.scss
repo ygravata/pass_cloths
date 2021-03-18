@@ -2,3 +2,60 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+.image_sizing {
+  &:hover{
+    cursor:pointer;
+  }
+}
+
+.btn-ghost {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+
+
+@media (min-width: 300px) {
+  .image_sizing{
+     width: 40%;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .image_sizing{
+     width: 35%;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .image_sizing{
+    width:30%;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .image_sizing{
+    width:25%;
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .image_sizing{
+    width:20%;
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .image_sizing{
+  }
+}

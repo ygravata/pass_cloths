@@ -16,10 +16,11 @@ const generateRandomCattlePhrase = () => {
           "Content-Type": "application/json"
         }
       })
-        .then(response => response.json())
-        .then((data) => {
-          console.log(data.text);
-          randomPhrase.innerHTML = data.text;
+      .then(response => response.json())
+      .then((data) => {
+        console.log(data.text);
+        randomPhrase.innerHTML = data.text;
+        randomPhrase.classList.add('btn','btn-ghost');
         });
 
 

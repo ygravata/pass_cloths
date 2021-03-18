@@ -22,7 +22,13 @@ class CattlesController < ApplicationController
   end
 
   def show
-    render json: @cattle.phrases.sample
+    @cattle_json = @cattle.only_one_owner.sample
+    render json: {phrase: @cattle_json, count: @cattle_json.cattles_count}
+  end
+
+  def double
+    @phrases = Phrase.two_owners
+    render json: {phrase: @phrases.sample, count: @phrases.sample.cattles_count}
   end
 
   def destroy

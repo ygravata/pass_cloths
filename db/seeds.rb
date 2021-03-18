@@ -31,7 +31,8 @@ puts "Creating #{petista.cattle_name.capitalize}!"
 common_sentences = [
   "A Globo tá de sacaganagem, sabotando o governo",
   "Também, com esse judiciário e congresso quem consegue governar?",
-  "Tá reclamando do que? Se muda do país"
+  "Tá reclamando do que? Se muda do país",
+  "Muuuuuuuuuuuu..!!!"
 ]
 
 bolso_sentences = [
@@ -43,6 +44,15 @@ bolso_sentences = [
   "Bom era na época do PT né?"
 ]
 
+
+pete_setences = [
+  "Não vai ter golpe!",
+  "Lula livre!",
+  "Lula roubou sim, assim como TODOS os políticos do brasil, porém não existem provas e o triplex e sítio não são dele.",
+  "Na época do FHC..."
+]
+
+
 bolso_sentences.each do |sentence|
   phrase = Phrase.create(
     text: sentence
@@ -50,6 +60,21 @@ bolso_sentences.each do |sentence|
 
   pass_cloth = PassCloth.create(
     cattle_id: bolsominion.id,
+    phrase_id: phrase.id
+  )
+
+  puts "Phrase #{phrase.id} created!"
+
+end
+
+
+pete_setences.each do |sentence|
+  phrase = Phrase.create(
+    text: sentence
+  )
+
+  pass_cloth = PassCloth.create(
+    cattle_id: petista.id,
     phrase_id: phrase.id
   )
 
